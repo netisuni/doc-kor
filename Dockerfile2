@@ -1,0 +1,6 @@
+FROM centos:latest
+LABEL maintainer "OCMKOREA webserver"
+MAINTAINER 0.1 suni.korea
+RUN ["yum", "-y", "install", "httpd"]
+EXPOSE 80
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
